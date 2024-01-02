@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.gradient-text {
+  background: linear-gradient(45deg, #020202, #0c81f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* CARD */
 .card_container {

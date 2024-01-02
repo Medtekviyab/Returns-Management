@@ -26,81 +26,43 @@ const Homepage = () => {
             Experience peace of mind with Repro – easy returns ensuring your
             delight.
           </p>
-          <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <a
-              href="#"
-              className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+          <form class="w-full max-w-md mx-auto">
+            <label
+              for="default-email"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
             >
-              Join waitlist
-              <svg
-                className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
+              Email sign-up
+            </label>
+            <div class="relative">
+              <div class="absolute inset-y-0 rtl:inset-x-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                <svg
+                  className="w-4 h-4 text-gray-900 dark:text-gray-900"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 16"
+                >
+                  <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                  <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                </svg>
+              </div>
+              <input
+                type="email"
+                id="default-email"
+                className="block w-full p-4 pl-10 text-sm text-black border border-gray-600 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-900 dark:placeholder-gray-900 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Enter your email here..."
+                required
+              />
+              <button
+                type="submit"
+                className="text-white absolute right-2.5 bottom-2 bg-black border border-black hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-black dark:border-black dark:placeholder-black dark:focus:ring-white-800"
               >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </a>
-          </div>
+                Join Waitlist
+              </button>{" "}
+            </div>
+          </form>
         </div>
       </section>
-
-      {/* <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-6">
-        <section className="bg-white">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:gap-16">
-            <div
-              className="flex flex-col justify-center items-start"
-              style={{ maxWidth: "600px", width: "100%", textAlign: "left" }}
-            >
-              <p
-                className="mb-8 text-xl font-normal text-gray-500 lg:text-2xl dark:text-gray-400"
-                style={{ lineHeight: "1.3", marginLeft: "-20px" }}
-              >
-                <span
-                  style={{
-                    fontWeight: "bold",
-                    color: "#0C81F7",
-                    fontSize: "clamp(30px, 8vw, 50px)",
-                  }}
-                >
-                  Where satisfaction meets every purchase, backed by our
-                  seamless return policy.
-                </span>
-              </p>
-              <p
-                className="mb-8 text-xl font-normal text-gray-500 lg:text-2xl dark:text-gray-400"
-                style={{ lineHeight: "1.3", marginLeft: "-20px" }}
-              >
-                <span
-                  style={{
-                    fontWeight: "bold",
-                    color: "black",
-                    fontSize: "clamp(20px, 6vw, 30px)",
-                  }}
-                >
-                  Experience peace of mind with Repro – easy returns ensuring
-                  your delight.
-                </span>
-              </p>
-            </div>
-            <div class="flex justify-end">
-              <img
-                src="Return.svg"
-                alt="product preview"
-                class="image"
-                style={{ maxWidth: "100%", height: "auto" }}
-              />
-            </div>
-          </div>
-        </section>
-      </div> */}
 
       <div
         className="text mt-10 mb-10 flex-container"
@@ -214,227 +176,18 @@ const Homepage = () => {
             stage.
           </p>
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <a
-              href="#"
-              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+            <button
+              type="button"
+              class="gradient-text inline-flex justify-center items-center py-2 px-4 text-base font-medium text-center text-gray-900 shadow-lg rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-black dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              style={{
+                boxShadow: "0 0 3px 0px #020202, 0 0 3px 0px #0c81f7",
+              }}
             >
               Join Waitlist
-            </a>
+            </button>
           </div>
         </div>
       </section>
-      {/* <section>
-        <div class="py-8 px-4 mx-auto w-full lg:py-2">
-          <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
-            <h1
-              class="text-gray-900 dark:text-white text-3xl md:text-4xl font-bold mb-2"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-              }}
-            >
-              The RePro return policy platform for commerce.
-            </h1>
-            <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">
-              "Revolutionizing returns, RePro simplifies commerce's return
-              policies, empowering seamless customer experiences while
-              streamlining merchant processes." "RePro: Redefining commerce
-              returns with an innovative platform, fostering hassle-free
-              transactions and customer-centric policies."
-            </p>
-
-            <ol class="space-y-8 w-80 mb-8">
-              <li>
-                <div
-                  class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
-                  role="alert"
-                >
-                  <div class="flex items-center justify-between">
-                    <h3 class="font-medium">7-Day return</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-undo-2"
-                    >
-                      <path d="M9 14 4 9l5-5" />
-                      <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11" />
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div
-                  class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
-                  role="alert"
-                >
-                  <div class="flex items-center justify-between">
-                    <h3 class="font-medium">Green Shipping protection</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-container"
-                    >
-                      <path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z" />
-                      <path d="M10 21.9V14L2.1 9.1" />
-                      <path d="m10 14 11.9-6.9" />
-                      <path d="M14 19.8v-8.1" />
-                      <path d="M18 17.5V9.4" />
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div
-                  class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
-                  role="alert"
-                >
-                  <div class="flex items-center justify-between">
-                    <h3 class="font-medium">On-time Delivery Guarantee</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-timer"
-                    >
-                      <line x1="10" x2="14" y1="2" y2="2" />
-                      <line x1="12" x2="15" y1="14" y2="11" />
-                      <circle cx="12" cy="14" r="8" />
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div
-                  class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
-                  role="alert"
-                >
-                  <div class="flex items-center justify-between">
-                    <h3 class="font-medium">Buyback Guarantee</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-heart-handshake"
-                    >
-                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                      <path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66" />
-                      <path d="m18 15-2-2" />
-                      <path d="m15 18-2-2" />
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div
-                  class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
-                  role="alert"
-                >
-                  <div class="flex items-center justify-between">
-                    <h3 class="font-medium">Extended Warranty</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-shield-plus"
-                    >
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-                      <path d="M8 11h8" />
-                      <path d="M12 15V7" />
-                    </svg>
-                  </div>
-                </div>
-              </li>
-            </ol>
-            <a
-              href="#"
-              class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
-            >
-              Book a demo
-              <svg
-                class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <div class="flex justify-center mb-10">
-            <div class="card max-w-screen-lg">
-              <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
-                <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">
-                  Start building risk-free shopping experience into your
-                  customer journey.
-                </h2>
-                <a
-                  href="#"
-                  class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-blue rounded-lg bg-white-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
-                >
-                  Book a demo
-                  <svg
-                    class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };
