@@ -1,8 +1,16 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import "../../src/app/globals.css";
 
 const Homepage = () => {
-  
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Email:", email);
+  };
+
   return (
     <div>
       <section className="bg-gray-100 dark:bg-gray-900">
@@ -28,9 +36,9 @@ const Homepage = () => {
             delight.
           </p>
 
-          <form class="w-full max-w-md mx-auto">
+          <form onSubmit={handleSubmit} class="w-full max-w-md mx-auto">
             <label
-              for="default-email"
+              htmlFor="default-email"
               class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
             >
               Email sign-up
@@ -54,6 +62,8 @@ const Homepage = () => {
                 className="block w-full p-4 pl-10 text-sm text-black border border-gray-600 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-900 dark:placeholder-gray-900 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Enter your email here..."
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <button
                 type="submit"
