@@ -2,6 +2,7 @@ import React from "react";
 import "../../src/app/globals.css";
 
 const Homepage = () => {
+  
   return (
     <div>
       <section className="bg-gray-100 dark:bg-gray-900">
@@ -26,6 +27,7 @@ const Homepage = () => {
             Experience peace of mind with Repro – easy returns ensuring your
             delight.
           </p>
+
           <form class="w-full max-w-md mx-auto">
             <label
               for="default-email"

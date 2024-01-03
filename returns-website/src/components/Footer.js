@@ -14,24 +14,7 @@ const Footer = () => {
               </a>
             </div>
             <div class="flex flex-wrap justify-end">
-              {/* <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-white">
-                  Resources
-                </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                  <li class="mb-4">
-                    <a href=" " class="hover:underline hover:text-sky-600">
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a href=" " class="hover:underline hover:text-sky-600">
-                      Case Studies
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
-    <div class="mr-8 mb-8 sm:mb-0">
+              <div class="mr-8 mb-8 sm:mb-0">
                 <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-white">
                   Follow us
                 </h2>
@@ -75,14 +58,13 @@ const Footer = () => {
           </div>
           <hr class="my-6 border-gray-300 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div class="sm:flex sm:items-center sm:justify-center">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2023{" "}
               <a href=" " class="hover:underline">
                 RePro™
               </a>
               . All Rights Reserved.
             </span>
-            
           </div>
         </div>
       </footer>
