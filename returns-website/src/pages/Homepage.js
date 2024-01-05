@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import "../../src/app/globals.css";
@@ -89,10 +89,10 @@ const Homepage = () => {
           Our <span style={{ color: "#0C81F7" }}>return policy</span> to you
         </p>
         <p className="text-base lg:text-1xl" style={{ maxWidth: "600px" }}>
-          The self-service eCommerce returns solution that makes reverse
+          The self-service E-Commerce returns solution that makes reverse
           logistics profitable for your eCommerce business.
         </p>
-      </div>
+      </div> 
 
       <div class="card_container">
         <div class="card">
