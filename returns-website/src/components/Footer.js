@@ -21,7 +21,7 @@ const Footer = () => {
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
                   <li class="mb-4">
                     <a
-                      href="https://github.com/Medtekviyab"
+                      href="https://www.instagram.com/medtek.healthcare/"
                       class="hover:underline hover:text-sky-600 "
                     >
                       Instagram

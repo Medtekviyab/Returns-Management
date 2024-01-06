@@ -1,5 +1,4 @@
 "use client";
-
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -52,11 +51,11 @@ export default function LoginPage() {
     router.push("/Newpage");
   };
 
-//   const handleLogout = async () => {
-//     await supabase.auth.signOut();
-//     router.refresh();
-//     setUser(null);
-//   };
+  //   const handleLogout = async () => {
+  //     await supabase.auth.signOut();
+  //     router.refresh();
+  //     setUser(null);
+  //   };
 
   console.log({ loading, user });
 

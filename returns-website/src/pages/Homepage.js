@@ -2,9 +2,15 @@
 
 import React, { useState } from "react";
 import "../../src/app/globals.css";
+import Navbar from "@/components/Navbar";
+import { useRouter } from "next/navigation";
+
+
 
 const Homepage = () => {
   const [email, setEmail] = useState("");
+  const router = useRouter(); // Get the router instance
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,6 +19,8 @@ const Homepage = () => {
 
   return (
     <div>
+      <Navbar hideSignIn={false} hideDropdown={true}  />
+    
       <section className="bg-gray-100 dark:bg-gray-900">
         <div className="mt-14 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-32">
           <h1 className="mb-4 text-3xl font-bold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-5xl dark:text-white">

@@ -2,10 +2,12 @@ import React from "react";
 import "../../src/app/globals.css";
 import Navbar from "@/components/Navbar";
 
+
+
 const Newpage = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar showDropdown={true} hideSignIn={true} />
       <section class="bg-white dark:bg-gray-900 mt-10">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
           <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
