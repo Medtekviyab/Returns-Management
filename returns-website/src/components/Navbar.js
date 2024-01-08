@@ -1,22 +1,35 @@
-'use client'
+"use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+let timeout;
 
-const Navbar = ({ showDropdown, hideDropdown,hideSignIn }) => {
+const Navbar = ({ showDropdown, hideDropdown, hideSignIn }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const router = useRouter(); 
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const closeDropdown = () => {
-    setIsDropdownOpen(false);
-  };
+  const router = useRouter();
 
   const gotoHome = () => {
     router.push("/");
+  };
+  const openDropdown = () => {
+    clearTimeout(timeout);
+    setIsDropdownOpen(true);
+  };
+
+  const closeDropdown = () => {
+    timeout = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 500);
+  };
+
+  const handleMouseEnter = () => {
+    openDropdown();
+  };
+
+  const handleMouseLeave = () => {
+    closeDropdown();
   };
 
   return (
@@ -43,22 +56,27 @@ const Navbar = ({ showDropdown, hideDropdown,hideSignIn }) => {
                 </button>
               </Link>
             )}
-             {!hideDropdown && (
-              <div className="relative inline-block text-left">
+            {!hideDropdown && (
+              <div
+                className="relative inline-block text-left"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
                 <button
                   type="button"
-                  className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-                  onClick={toggleDropdown}
+                  className="flex text-sm bg-gray-300 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  onClick={openDropdown}
                   aria-expanded={isDropdownOpen ? "true" : "false"}
                 >
                   <span className="sr-only">Open user menu</span>
-                  <img
-                    className="w-8 h-8 rounded-full"
-                    src="/docs/images/people/profile-picture-3.jpg"
-                    alt="user photo"
+                  <Image
+                    src="/User.svg"
+                    alt="product preview"
+                    width="40"
+                    height="40"
+                    class="max-w-md rounded-full h-auto"
                   />
                 </button>
-
                 {isDropdownOpen && (
                   <div
                     className="absolute right-0 mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
@@ -95,7 +113,7 @@ const Navbar = ({ showDropdown, hideDropdown,hideSignIn }) => {
                   </div>
                 )}
               </div>
-             )}
+            )}
           </div>
         </div>
       </nav>
